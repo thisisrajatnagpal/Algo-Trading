@@ -4,7 +4,7 @@ This repository contains the code snippets used for trading with Zerodha KiteCon
 
 <h1 align="center">
   <br>
-  <a href="http://www.amitmerchant.com/electron-markdownify"><img src="https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.png" alt="Markdownify" width="200"></a>
+  <a href="https://api.nuget.org/v3-flatcontainer/tech.zerodha.kiteconnect/4.1.1/icon" alt="Markdownify" width="200"></a>
   <br>
   Markdownify
   <br>
