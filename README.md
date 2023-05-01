@@ -1,10 +1,9 @@
 # Algo-Trading
 This repository contains the code snippets used for trading with Zerodha KiteConnect API using python
 
-
 <h1 align="center">
   <br>
-  ![alt text](Kite.png)
+  ![ezcv logo](https://raw.githubusercontent.com/Descent098/ezcv/master/.github/logo.png)
   <br>
   KiteConnect
   <br>
