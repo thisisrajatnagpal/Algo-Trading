@@ -1,6 +1,7 @@
 # Algo-Trading
 This repository contains the code snippets used for trading with Zerodha KiteConnect API using python
 <p align="center">
+  <img width="460" height="300" src="[http://www.fillmurray.com/460/300](https://user-images.githubusercontent.com/48415329/235424597-b8c761a7-63f4-47d8-b06a-75b2d3ee6800.png)">
   ![Kite](https://user-images.githubusercontent.com/48415329/235424597-b8c761a7-63f4-47d8-b06a-75b2d3ee6800.png)
 </p>
 <p align="center">
