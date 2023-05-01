@@ -10,7 +10,7 @@ This repository contains the code snippets used for trading with Zerodha KiteCon
   <br>
 </h1>
 
-<h4 align="center">A minimal Markdown Editor desktop app built on top of <a href="http://electron.atom.io" target="_blank">Electron</a>.</h4>
+<h4 align="center">A Hub of necessary python functions to use for algorithmic trading</h4>
 
 <p align="center">
   <a href="https://badge.fury.io/js/electron-markdownify">
