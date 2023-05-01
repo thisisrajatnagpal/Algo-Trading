@@ -4,7 +4,7 @@ This repository contains the code snippets used for trading with Zerodha KiteCon
 
 <h1 align="center">
   <br>
-  <a href="![alt text](https://api.nuget.org/v3-flatcontainer/tech.zerodha.kiteconnect/4.1.1/icon)" width="200"></a>
+  ![alt text](https://github.com/thisisrajatnagpal/Algo-Trading/blob/2836763e9bc3f743d64286c438c1999b1c82c2d4/Kite.png)
   <br>
   KiteConnect
   <br>
