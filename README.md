@@ -1,7 +1,7 @@
 # Algo-Trading
 This repository contains the code snippets used for trading with Zerodha KiteConnect API using python
 <p align="center">
- <img width="200" height="150" src = "https://user-images.githubusercontent.com/48415329/235424597-b8c761a7-63f4-47d8-b06a-75b2d3ee6800.png" >
+ <img width="200" height="200" src = "https://user-images.githubusercontent.com/48415329/235424597-b8c761a7-63f4-47d8-b06a-75b2d3ee6800.png" >
 </p>
 <p align="center">
   <h4 align="center">A Hub of necessary python functions to use for algorithmic trading</h4>
