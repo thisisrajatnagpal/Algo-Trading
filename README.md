@@ -3,7 +3,8 @@ This repository contains the code snippets used for trading with Zerodha KiteCon
 
 <h1 align="center">
   <br>
-  ![ezcv logo](https://raw.githubusercontent.com/Descent098/ezcv/master/.github/logo.png)
+  ![Kite](https://user-images.githubusercontent.com/48415329/235424597-b8c761a7-63f4-47d8-b06a-75b2d3ee6800.png)
+
   <br>
   KiteConnect
   <br>
