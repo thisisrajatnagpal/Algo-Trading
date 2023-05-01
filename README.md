@@ -46,7 +46,7 @@ import os
 import datetime as dt
 import pandas as pd
 
-cwd = os.chdir("Current Workinf Directory")
+cwd = os.chdir("Current Working Directory")
 
 # generate trading sesion
 # Please go to Gen Access folder to get these two files as input
