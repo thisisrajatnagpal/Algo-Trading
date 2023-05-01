@@ -3,9 +3,9 @@ This repository contains the code snippets used for trading with Zerodha KiteCon
 
 ![Kite](https://user-images.githubusercontent.com/48415329/235424597-b8c761a7-63f4-47d8-b06a-75b2d3ee6800.png)
 
-
-<h4 align="center">A Hub of necessary python functions to use for algorithmic trading</h4>
-
+<p align="center">
+  <h4 align="center">A Hub of necessary python functions to use for algorithmic trading</h4>
+</p>
 
 
 <p align="center">
