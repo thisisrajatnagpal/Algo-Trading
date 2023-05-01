@@ -2,7 +2,7 @@
 """
 Created on Thu Apr 27 10:06:50 2023
 
-@author: Admin
+@author: Rajat
 """
 
 from kiteconnect import KiteConnect
@@ -14,7 +14,7 @@ from selenium.webdriver.chrome.options import Options
 import pyotp
 global driver
 
-cwd = os.chdir(("D:\Algo Trading"))
+cwd = os.chdir(("Current Working Directory"))
 
 def autologin():
     token_path = "api_key.txt"
@@ -36,7 +36,7 @@ def autologin():
     password = driver.find_element(By.XPATH, '/html/body/div[1]/div/div[2]/div[1]/div/div/div[2]/form/div[2]/input')    
     password.send_keys(key_secret[3])
     driver.find_element(By.XPATH, '/html/body/div[1]/div/div/div[1]/div/div/div/form/div[4]/button').click()
-    authkey = pyotp.TOTP('3NQFT6TF2FQOPRI2AJX44TPFW6DEZWDL')
+    authkey = pyotp.TOTP('write authenticate key here')
     #print(authkey.now())
     driver.find_element(By.XPATH, '/html/body/div[1]/div/div[2]/div[1]/div[2]/div/div[2]/form/div[1]/input').send_keys(authkey.now())
     #driver.implicitly_wait(10)
@@ -47,7 +47,6 @@ def autologin():
     with open('request_token.txt', 'w') as the_file:
         the_file.write(request_token)
     driver.quit()
- #http://127.0.0.1/?type=login&status=success&request_token=fA37Ny0yBrZEcNMTLRHLwxn3jIF2MWIm&action=login
     
 autologin() 
 request_token = open("request_token.txt", 'r').read()
