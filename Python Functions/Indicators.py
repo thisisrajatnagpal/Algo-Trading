@@ -1,5 +1,5 @@
 
-
+### Heere DF refers to OHLC Data###
 def MACD(DF, a, b, c):
     """function to calculate the MACD"""
   
@@ -27,3 +27,13 @@ def bollBnd(DF, n):
     df["BB_width"] = df["BB_up"] - df["BB_dn"]
     df.dropna(inplace=True)
     return df 
+
+def atr(DF,n):
+    "function to calculate True Range and Average True Range"
+    df = DF.copy()
+    df['H-L']=abs(df['high']-df['low'])
+    df['H-PC']=abs(df['high']-df['close'].shift(1))
+    df['L-PC']=abs(df['low']-df['close'].shift(1))
+    df['TR']=df[['H-L','H-PC','L-PC']].max(axis=1,skipna=False)
+    df['ATR'] = df['TR'].ewm(com=n,min_periods=n).mean()
+    return df['ATR']
