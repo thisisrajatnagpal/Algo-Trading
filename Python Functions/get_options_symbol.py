@@ -1,10 +1,20 @@
 # For stock options, it is fairly simple and scalable. This function should work for all NIFTY 50 stocks
 
 def get_options_symbol(ticker, ltp):
-    ce_strike = get_strike_price(ltp, 100)
-    pe_strike = ce_strike - 100
+    # Taking the rows from NFO DataFrame which contains the ticker name
     temp = NFO_instrument_df[NFO_instrument_df['tradingsymbol'].str.contains(ticker)]
+    # Filtering out current month's options data
     temp  = temp[temp['tradingsymbol'].str.contains(dt.datetime.now().strftime("%B").upper())]
+    # Removing Futures type objects
+    temp = temp[temp[ 'instrument_type'] != 'FUT']
+    # Hard Coded the difference in strike price, change this part of the code if you are getting problems
+    diff = temp['strike'].iloc[2] - temp['strike'].iloc[0]
+    # getting the rounded off strike price based on the difference in strike price and the last trading price
+    # CE strike price is taken as the closest upper "out of the money" options strike price
+    ce_strike = get_strike_price(ltp, diff)
+    # PE strike price is taken as the closest lower "out of the money" strike price
+    pe_strike = ce_strike - diff
     ce_df = temp[temp['tradingsymbol'].str.contains(str(ce_strike) + "CE")]
     pe_df = temp[temp['tradingsymbol'].str.contains(str(pe_strike) + "PE")]
+    # returning the CE and PE symbol
     return ce_df['tradingsymbol'].iloc[0], pe_df['tradingsymbol'].iloc[0]
