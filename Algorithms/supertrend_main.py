@@ -50,12 +50,9 @@ def main(capital):
                     placeSLOrder(ce_symbol, quantity)
                 if st_dir[ticker] == ["red","red","red"]:
                     placeSLOrder(pe_symbol, quantity)
-            if(ce_present):
-                order_id = ord_df.loc[(ord_df['tradingsymbol'] == ce_symbol) & (ord_df['status'].isin(["TRIGGER PENDING","OPEN"]))]
-                ModifyOrder(order_id, ce_symbol)
-            if(pe_present):
-                order_id = ord_df.loc[(ord_df['tradingsymbol'] == pe_symbol) & (ord_df['status'].isin(["TRIGGER PENDING","OPEN"]))]
-                ModifyOrder(order_id, pe_symbol)
+            if(order_present):
+                order_id = ord_df.loc[(ord_df['tradingsymbol'].str.contains(ticker)) & (ord_df['status'].isin(["TRIGGER PENDING","OPEN"]))]
+                ModifyOrder(order_id)    
         except:
             print("API error for ticker :",ticker)
     
