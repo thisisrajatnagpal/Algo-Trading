@@ -3,8 +3,8 @@ def placeSLOrder(symbol, quantity):
     t_type = kite.TRANSACTION_TYPE_BUY
     t_type_sl = kite.TRANSACTION_TYPE_SELL
     
-    ohlc_options = fetchOHLC(symbol, "minute", 1, NFO_instrument_df)
-
+    #ohlc_options = fetchOHLC(symbol, "minute", 1, NFO_instrument_df)
+    ltp = kite.ltp("NFO:" + symbol)["NFO:" + symbol]['last_price']
     limit_price, sl_price = get_price(ohlc_options)
   
     limit_order = kite.place_order(tradingsymbol=symbol,
