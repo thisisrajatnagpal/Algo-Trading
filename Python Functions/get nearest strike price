@@ -1,4 +1,4 @@
-def get_strike_price(ltp, ce = True, multiple):
+def get_strike_price(ltp, multiple, ce = True):
   # ltp is the last trading price
   # ce flag checks whether it is call or put
   # multiple indicates the lowest multiple in which strike prices are given
