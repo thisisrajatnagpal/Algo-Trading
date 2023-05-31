@@ -51,7 +51,7 @@ def instrumentLookup(instrument_df, symbol):
     
 def fetchOHLC(ticker, interval, from_date, to_date):
     """extracts historical data and outputs in the form of dataframe"""
-    # tikcer is the NSE instrument you want to use
+    # ticker is the NSE instrument you want to use
     # interval is the candlestick time frame for OHLC data
     # The dates should be in this form - "day-month-Year"
     instrument = instrumentLookup(instrument_df, ticker)
