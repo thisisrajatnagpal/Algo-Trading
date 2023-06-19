@@ -31,10 +31,10 @@ def main(capital):
             # It checks whether the trend is reversed or not, i.e., it checks wether all three supertrends have changed colour
             st_dir_refresh(ohlc, ticker)
 
-            quantity = # Using some notion, you have to decide how much quantity you want to trade for a particular stock based on the lot size for that particular stock
+            #quantity = Using some notion, you have to decide how much quantity you want to trade for a particular stock based on the lot size for that particular stock
             ltp = kite.ltp("NSE:" + ticker)["NSE:" + ticker]['last_price']
 
-            ce_symbol, pe_symbol = get_options_symbol(ticker, ltp)
+            ce_symbol, pe_symbol, quantity = get_options_symbol(ticker, ltp)
             order_present = False
             
             if(pos_df.shape[0] != 0):
