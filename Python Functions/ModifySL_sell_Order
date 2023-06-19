@@ -1,5 +1,5 @@
 def ModifyOrder(order_id):  
-    ticker = order_id['tradingsymbol'].iloc[0]
+    symbol = order_id['tradingsymbol'].iloc[0]
     #ohlc_options = fetchOHLC(ticker,"minute",1, NFO_instrument_df)
     ltp = kite.ltp("NFO:" + symbol)["NFO:" + symbol]['last_price']
     temp, price = get_price(ltp)
