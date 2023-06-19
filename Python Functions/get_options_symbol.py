@@ -23,4 +23,4 @@ def get_options_symbol(ticker, ltp):
     #print(type(ce_df.iloc[0]['tradingsymbol']))
     pe_df = temp[temp['tradingsymbol'].str.contains(str(pe_strike) + "PE")]
     # returning the CE and PE symbol
-    return ce_df.iloc[0]['tradingsymbol'], pe_df.iloc[0]['tradingsymbol']
+    return ce_df.iloc[0]['tradingsymbol'], pe_df.iloc[0]['tradingsymbol'], ce_df.iloc[0]['lot_size']
