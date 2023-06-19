@@ -44,3 +44,12 @@ def fetchOHLC(ticker, interval, from_date, to_date):
             from_date = to_date
     data.set_index("date", inplace=True)
     return data
+
+""" Or you can use the below function if you just want the latest OHLC Data from a certain date"""
+
+def fetchOHLC(ticker, interval, duration, instrument_df = instrument_df):
+    """extracts historical data and outputs in the form of dataframe"""
+    instrument = instrumentLookup(instrument_df,ticker)
+    data = pd.DataFrame(kite.historical_data(instrument,dt.date.today()-dt.timedelta(duration), dt.date.today(), interval))
+    data.set_index("date",inplace=True)
+    return data
