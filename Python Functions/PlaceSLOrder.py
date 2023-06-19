@@ -33,7 +33,7 @@ def placeSLOrder(symbol, quantity):
                                 quantity=quantity,
                                 order_type=kite.ORDER_TYPE_SL,
                                 price=sl_price,
-                                trigger_price = round((1+0.05)*sl_price, 1),
+                                trigger_price = round((1+0.01)*sl_price, 1),
                                 product=kite.PRODUCT_MIS,
                                 variety=kite.VARIETY_REGULAR)
             else:
