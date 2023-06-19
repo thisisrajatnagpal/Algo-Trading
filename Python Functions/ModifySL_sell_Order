@@ -7,6 +7,6 @@ def ModifyOrder(order_id):
     if(order_id['price'].iloc[0] < price):
         kite.modify_order(order_id=order_id,
                         price=price,
-                        trigger_price=round((1+0.05/100)*price, 1),
+                        trigger_price=round((1+0.01)*price, 1),
                         order_type=kite.ORDER_TYPE_SL,
                         variety=kite.VARIETY_REGULAR) 
