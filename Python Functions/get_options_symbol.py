@@ -5,7 +5,7 @@ def get_options_symbol(ticker, ltp):
     print(ltp)
     temp = NFO_instrument_df[NFO_instrument_df['tradingsymbol'].str.contains(ticker)]
     # Filtering out current month's options data
-    temp  = temp[temp['tradingsymbol'].str.contains(dt.datetime.now().strftime("%B").upper())]
+    temp  = temp[temp['tradingsymbol'].str.contains(dt.datetime.now().strftime("%B").upper()[0:3])]
     # Removing Futures type objects
     temp = temp[temp[ 'instrument_type'] != 'FUT']
     # Hard Coded the difference in strike price, change this part of the code if you are getting problems
