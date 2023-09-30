@@ -39,6 +39,6 @@ def main(capital):
                 Place_SL_Order(ce_symbol, quantity, order_type)
             if(order_present):
                 order_id = ord_df.loc[(ord_df['tradingsymbol'].str.contains(ticker)) & (ord_df['status'].isin(["TRIGGER PENDING","OPEN"]))]
-                Modify_Order(order_id, order_type)    
+                Modify_SL_Order(order_id, order_type)    
         except:
             print("API error for ticker :", ticker)
