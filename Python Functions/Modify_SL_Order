@@ -1,4 +1,4 @@
-def ModifyOrder(order_df, order_type = "buy"):  
+def Modify_SL_Order(order_df, order_type = "buy"):  
     # We have to get the options ticker in order to proceed with the function
     symbol = order_df['tradingsymbol'].iloc[0]
     # getting last traded price of the ticker from the API, please note that in order to get the last traded price of an options symbol, we have to add the prefix "NFO:"
