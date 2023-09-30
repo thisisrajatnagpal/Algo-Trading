@@ -12,7 +12,7 @@ def ModifyOrder(order_df, order_type = "buy"):
                         trigger_price = tp,
                         order_type = kite.ORDER_TYPE_SL,
                         variety = kite.VARIETY_REGULAR) 
-    elif(order_type = "sell"):
+    elif(order_type == "sell"):
         tp = round((1-0.01)*new_sl_price, 1)
         if(order_df['price'].iloc[0] > new_sl_price):
             kite.modify_order(order_id = order_df["order_id"].iloc[0],
