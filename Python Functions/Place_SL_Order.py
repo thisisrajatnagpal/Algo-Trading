@@ -1,4 +1,4 @@
-def placeSLOrder(symbol, quantity, order_type = "buy"):
+def Place_SL_Order(symbol, quantity, order_type = "buy"):
     if(order_type == "buy"):
     # If we are buing an option then the stop loss order will be selling the option
         t_type = kite.TRANSACTION_TYPE_BUY
