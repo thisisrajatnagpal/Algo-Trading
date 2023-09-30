@@ -25,7 +25,7 @@ def instrumentLookup(instrument_df, symbol):
     except:
         return -1
     
-def fetchOHLC(ticker, interval, from_date, to_date):
+def fetch_OHLC(ticker, interval, from_date, to_date):
     """extracts historical data and outputs in the form of dataframe"""
     # tikcer is the NSE instrument you want to use
     # interval is the candlestick time frame for OHLC data
@@ -47,7 +47,7 @@ def fetchOHLC(ticker, interval, from_date, to_date):
 
 """ Or you can use the below function if you just want the latest OHLC Data from a certain date"""
 
-def fetchOHLC(ticker, interval, duration, instrument_df = instrument_df):
+def util_fetch_OHLC(ticker, interval, duration, instrument_df = instrument_df):
     """extracts historical data and outputs in the form of dataframe"""
     instrument = instrumentLookup(instrument_df,ticker)
     data = pd.DataFrame(kite.historical_data(instrument,dt.date.today()-dt.timedelta(duration), dt.date.today(), interval))
