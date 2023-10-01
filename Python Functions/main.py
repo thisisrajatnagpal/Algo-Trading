@@ -1,7 +1,7 @@
 def main(capital):
     a,b = 0,0
     while a < 10:
-    # running the loop multiple times to increase the probability of getting the required information in case if connection is not eastablished in one go
+    # running the loop multiple times to increase the probability of getting the required information in case if connection is not established in one go
         try:
             # getting the open positions of the day
             pos_df = pd.DataFrame(kite.positions()["day"])
