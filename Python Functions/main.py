@@ -26,18 +26,18 @@ def main(capital):
 
             # currently quantity is set to one lot per options ticker, it can be changed in util_get_options_symbol function
             ce_symbol, pe_symbol, quantity = util_get_options_symbol(ticker, ltp)
-            order_present = False
+            open_position = False
             
             if(pos_df.shape[0] != 0):
                 # if there is an open position
                 if(pos_df[pos_df['tradingsymbol'].str.contains(ticker)].shape[0] != 0):    
-                    order_present = True
+                    open_position = True
                 
 
-            if (not(order_present)):
+            if (not(open_position)):
             # Give some condition here
                 Place_SL_Order(ce_symbol, quantity, order_type)
-            if(order_present):
+            if(open_position):
                 order_df = ord_df.loc[(ord_df['tradingsymbol'].str.contains(ticker)) & (ord_df['status'].isin(["TRIGGER PENDING","OPEN"]))]
                 Modify_SL_Order(order_df, order_type)    
         except:
