@@ -39,7 +39,7 @@ def main(capital):
 
             if (not(open_position)):
             # Give some condition here
-                Place_Order_with_SL(ce_symbol, quantity, order_type)
+                Place_Order_with_SL(ce_symbol, quantity, order_type, SL_per = 7)
             if(open_position):
                 order_df = ord_df.loc[(ord_df['tradingsymbol'].str.contains(ticker)) & (ord_df['status'].isin(["TRIGGER PENDING","OPEN"]))]
                 Modify_SL_Order(order_df, order_type)    
