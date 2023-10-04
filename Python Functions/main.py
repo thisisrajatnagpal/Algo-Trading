@@ -18,6 +18,9 @@ def main(capital):
         except:
             print("can't extract order data..retrying")
             b+=1
+     Open_SL_Orders = ord_df.loc[((ord_df['order_type'] == "SL") & (ord_df['status'] == "OPEN"))]
+     if(Open_SL_Orders.shape[0] != 0):
+         Close_SL_Order(Open_SL_Orders)
      for ticker in tickers:
         print("starting passthrough for.....",ticker)    
         try:
