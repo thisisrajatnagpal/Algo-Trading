@@ -24,4 +24,4 @@ def Close_SL_order(order_df):
                 new_sl_price = (1+0.01)*new_sl_price
             i = i+1
         if not(i<5):
-            bot.sendMessage(receiver_id,"Stop Loss order for the " + str(symbol) + " is OPEN and there is not sufficient volume to close it, please close it manually!")
+            bot.sendMessage(receiver_id, "Stop Loss order for the " + str(symbol) + " is OPEN and there is not sufficient volume to close it, please close it manually!")
