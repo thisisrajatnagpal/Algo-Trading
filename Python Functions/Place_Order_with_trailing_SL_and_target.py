@@ -14,7 +14,7 @@ def Place_Order_with_trailing_SL_and_target(symbol, quantity, order_type = "buy"
     ltp = kite.ltp("NFO:" + symbol)["NFO:" + symbol]['last_price']
 
     # limit price and stop loss price will be adjusted according to the order type, the methodology is written in the utility function 
-    limit_price, sl_price = util_get_price(ltp, order_type, sl_per)
+    limit_price, sl_price, = util_get_price(ltp, order_type, sl_per)
 
     # placing our limit order    
     limit_order = kite.place_order(tradingsymbol=symbol,
