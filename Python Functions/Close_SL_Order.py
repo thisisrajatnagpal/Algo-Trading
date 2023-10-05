@@ -1,4 +1,4 @@
-def Close_SL_order(order_df):
+def Close_SL_Order(order_df):
   for iter in range(order_df.shape[0]):
         if(order_df['order_type'].iloc[iter]!= "SL"):
             print("The order for " + str( order_df['tradingsymbol'].iloc[iter]) + " is not a Stop Loss order")
